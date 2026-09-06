@@ -2,8 +2,9 @@
 
 The web UI for the CloudDrive file storage & sharing service — a Google-Drive-style app: folders, drag-and-drop upload, sharing, public links, search, starred files and trash.
 
-Live app: `<ADD_YOUR_VERCEL_URL_HERE>`
-Backend repo: `<ADD_LINK_TO_BACKEND_REPO_HERE>`
+Live app: [`https://cloud-drive-frontend-umber.vercel.app`](https://cloud-drive-frontend-umber.vercel.app)
+Backend repo: [cloud-drive-backend](https://github.com/Neha-Deepak2005/cloud-drive-backend)
+Live API: [`https://cloud-drive-backend-5at6.onrender.com`](https://cloud-drive-backend-5at6.onrender.com)
 
 ## Tech stack
 

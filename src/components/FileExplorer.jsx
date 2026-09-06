@@ -11,7 +11,7 @@ import {
   trashFolder,
   unstarFile,
 } from "../services/drive";
-import { formatBytes, formatDate, iconFor } from "../utils/format";
+import { formatBytes, formatDate, iconFor, iconColorFor, FOLDER_ICON_COLOR } from "../utils/format";
 import ItemMenu from "./ItemMenu.jsx";
 import RenameModal from "./RenameModal.jsx";
 import MoveModal from "./MoveModal.jsx";
@@ -122,9 +122,11 @@ export default function FileExplorer({ folders, files, currentFolderId, onChange
             <div
               key={f.id}
               onClick={() => navigate(`/folder/${f.id}`)}
-              className="group relative cursor-pointer rounded-lg border border-gray-200 bg-white p-4 hover:border-brand-300 hover:shadow-sm"
+              className="group relative cursor-pointer rounded-lg border border-gray-200 bg-white p-4 transition-shadow hover:border-brand-300 hover:shadow-md"
             >
-              <div className="mb-2 text-3xl">📁</div>
+              <div className={`mb-2 flex h-11 w-11 items-center justify-center rounded-lg text-2xl ${FOLDER_ICON_COLOR}`}>
+                📁
+              </div>
               <p className="truncate text-sm font-medium text-gray-800">{f.name}</p>
               <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-100">
                 <ItemMenu actions={folderActions(f)} />
@@ -135,9 +137,11 @@ export default function FileExplorer({ folders, files, currentFolderId, onChange
             <div
               key={f.id}
               onClick={() => downloadFile(f)}
-              className="group relative cursor-pointer rounded-lg border border-gray-200 bg-white p-4 hover:border-brand-300 hover:shadow-sm"
+              className="group relative cursor-pointer rounded-lg border border-gray-200 bg-white p-4 transition-shadow hover:border-brand-300 hover:shadow-md"
             >
-              <div className="mb-2 text-3xl">{iconFor(f.mime_type)}</div>
+              <div className={`mb-2 flex h-11 w-11 items-center justify-center rounded-lg text-2xl ${iconColorFor(f.mime_type)}`}>
+                {iconFor(f.mime_type)}
+              </div>
               <p className="truncate text-sm font-medium text-gray-800">{f.name}</p>
               <p className="mt-0.5 text-xs text-gray-400">{formatBytes(f.size_bytes)}</p>
               {f.is_starred && <span className="absolute left-2 top-2 text-yellow-500">★</span>}
@@ -164,7 +168,10 @@ export default function FileExplorer({ folders, files, currentFolderId, onChange
                 onClick={() => navigate(`/folder/${f.id}`)}
                 className="cursor-pointer border-b border-gray-100 hover:bg-gray-50"
               >
-                <td className="flex items-center gap-2 py-2.5">📁 {f.name}</td>
+                <td className="flex items-center gap-2 py-2.5">
+                  <span className={`flex h-6 w-6 items-center justify-center rounded ${FOLDER_ICON_COLOR}`}>📁</span>
+                  {f.name}
+                </td>
                 <td className="py-2.5 text-gray-400">—</td>
                 <td className="py-2.5 text-gray-400">{formatDate(f.updated_at)}</td>
                 <td className="py-2.5 text-right">
@@ -179,7 +186,10 @@ export default function FileExplorer({ folders, files, currentFolderId, onChange
                 className="cursor-pointer border-b border-gray-100 hover:bg-gray-50"
               >
                 <td className="flex items-center gap-2 py-2.5">
-                  {iconFor(f.mime_type)} {f.name} {f.is_starred && <span className="text-yellow-500">★</span>}
+                  <span className={`flex h-6 w-6 items-center justify-center rounded ${iconColorFor(f.mime_type)}`}>
+                    {iconFor(f.mime_type)}
+                  </span>
+                  {f.name} {f.is_starred && <span className="text-yellow-500">★</span>}
                 </td>
                 <td className="py-2.5 text-gray-400">{formatBytes(f.size_bytes)}</td>
                 <td className="py-2.5 text-gray-400">{formatDate(f.updated_at)}</td>

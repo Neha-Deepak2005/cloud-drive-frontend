@@ -4,7 +4,7 @@ import Topbar from "./Topbar.jsx";
 
 export default function AppShell() {
   return (
-    <div className="flex h-screen overflow-hidden bg-gray-50">
+    <div className="flex h-screen overflow-hidden bg-transparent">
       <Sidebar />
       <div className="flex flex-1 flex-col overflow-hidden">
         <Topbar />

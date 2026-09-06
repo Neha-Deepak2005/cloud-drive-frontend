@@ -54,7 +54,7 @@ export default function UploadDropzone({ folderId, onUploaded, children }) {
 
       <button
         onClick={open}
-        className="absolute bottom-6 right-6 z-20 flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-gray-700 shadow-lg ring-1 ring-gray-200 hover:bg-gray-50"
+        className="absolute bottom-6 right-6 z-20 flex items-center gap-2 rounded-full bg-brand-gradient px-5 py-3 text-sm font-medium text-white shadow-lg transition-transform hover:scale-[1.03] hover:shadow-xl"
       >
         ⬆️ Upload
       </button>

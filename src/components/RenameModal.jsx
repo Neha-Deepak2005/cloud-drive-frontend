@@ -37,7 +37,7 @@ export default function RenameModal({ initialName, onSubmit, onClose }) {
             <button type="button" onClick={onClose} className="rounded-md px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100">
               Cancel
             </button>
-            <button type="submit" disabled={busy} className="rounded-md bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:opacity-60">
+            <button type="submit" disabled={busy} className="rounded-md bg-brand-gradient px-4 py-2 text-sm font-medium text-white hover:shadow-md disabled:opacity-60">
               Save
             </button>
           </div>

@@ -7,8 +7,10 @@ html, body, #root {
 }
 
 body {
-  @apply bg-gray-50 text-gray-900 antialiased;
+  @apply text-gray-900 antialiased;
   margin: 0;
+  background: linear-gradient(160deg, #f5f3ff 0%, #fdf4ff 35%, #fff7ed 100%);
+  background-attachment: fixed;
 }
 
 * {

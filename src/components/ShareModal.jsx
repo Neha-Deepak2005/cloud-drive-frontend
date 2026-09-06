@@ -107,7 +107,7 @@ export default function ShareModal({ resourceType, resourceId, name, onClose }) 
           <button
             type="submit"
             disabled={busy}
-            className="rounded-md bg-brand-600 px-3 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:opacity-60"
+            className="rounded-md bg-brand-gradient px-3 py-2 text-sm font-medium text-white hover:shadow-md disabled:opacity-60"
           >
             Share
           </button>

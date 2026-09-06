@@ -37,7 +37,7 @@ export default function Topbar() {
       <div className="relative ml-auto">
         <button
           onClick={() => setMenuOpen((o) => !o)}
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-600 text-sm font-medium text-white"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-gradient text-sm font-medium text-white shadow-sm"
         >
           {initials}
         </button>

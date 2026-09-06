@@ -26,8 +26,13 @@ export default function Signup() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4">
-      <div className="w-full max-w-sm rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
+    <div className="flex min-h-screen items-center justify-center bg-brand-gradient px-4">
+      <div className="w-full max-w-sm rounded-xl border border-gray-200 bg-white p-8 shadow-xl">
+        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-gradient text-white shadow-sm">
+          <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
+            <path d="M6 18a4 4 0 010-8 5 5 0 019.58-1.5A4.5 4.5 0 0118 18H6z" fill="currentColor" />
+          </svg>
+        </div>
         <h1 className="mb-1 text-2xl font-semibold text-gray-900">Create your account</h1>
         <p className="mb-6 text-sm text-gray-500">Start storing and sharing files</p>
 
@@ -69,7 +74,7 @@ export default function Signup() {
           <button
             type="submit"
             disabled={busy}
-            className="w-full rounded-md bg-brand-600 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:opacity-60"
+            className="w-full rounded-md bg-brand-gradient py-2 text-sm font-medium text-white shadow-sm transition-transform hover:scale-[1.01] hover:shadow-md disabled:opacity-60"
           >
             {busy ? "Creating account…" : "Create account"}
           </button>

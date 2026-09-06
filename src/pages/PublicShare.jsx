@@ -65,7 +65,7 @@ export default function PublicShare() {
             className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm"
           />
           {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
-          <button className="mt-4 w-full rounded-md bg-brand-600 py-2 text-sm font-medium text-white hover:bg-brand-700">
+          <button className="mt-4 w-full rounded-md bg-brand-gradient py-2 text-sm font-medium text-white hover:shadow-md">
             Unlock
           </button>
         </form>
@@ -92,7 +92,7 @@ export default function PublicShare() {
           </div>
           <button
             onClick={download}
-            className="rounded-md bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700"
+            className="rounded-md bg-brand-gradient px-4 py-2 text-sm font-medium text-white hover:shadow-md"
           >
             Download
           </button>
